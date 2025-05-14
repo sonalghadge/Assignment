@@ -1,0 +1,253 @@
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #111;
+  color: #333;
+  padding: 20px;
+}
+.container {
+  background: white;
+ padding: 20px 40px 40px 40px; /* top right bottom left */
+  max-width: 400px;
+  margin: auto;
+  border-radius: 10px;
+}
+h2 {
+  text-align: center;
+  color: #e91e63;
+}
+.option {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+  /* border-radius: 5px; */
+}
+.option input[type="radio"] {
+  margin-right: 10px;
+}
+.option .discount {
+  background-color: pink;
+  color: #c2185b;
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-left: 10px;
+}
+.option .price {
+  float: right;
+}
+.option.popular {
+  border-color: #FF6B82;
+  position: relative;
+}
+.option {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  transition: border-color 0.3s, background-color 0.3s;
+}
+
+.option input[type="radio"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  margin-right: 15px;
+  position: relative;
+  top: 0;
+  vertical-align: middle;
+  cursor: pointer;
+  transition: border 0.3s ease;
+}
+
+.option input[type="radio"]:checked {
+  border-color: #FF6B82;
+  background-color: #FF6B82;
+}
+
+.option input[type="radio"]::before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  margin: 4px;
+  border-radius: 50%;
+  background: white;
+}
+
+.option-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.option-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.right.price {
+  font-weight: bold;
+}
+
+.discount {
+  background-color: pink;
+  color: #c2185b;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+.standard-price {
+  font-size: 0.79em;
+  font-weight: 400;
+  color:black;
+}
+
+.option.popular::before {
+  content: "MOST POPULAR";
+  position: absolute;
+  top: -10px;
+  right: 10px;
+  background: #FF6B82;
+  color: white;
+  padding: 2px 6px;
+  font-size: 12px;
+  border-radius: 4px;
+}
+.selection {
+  margin-top: 10px;
+}
+.selection label {
+  margin-right: 5px;
+}
+.summary {
+  text-align: center;
+  margin-top: 20px;
+}
+.add-to-cart {
+  background-color: #FF6B82;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+h2.bogo-line {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-size: 1.5em;
+  margin: 20px 0;
+}
+
+h2.bogo-line::before,
+h2.bogo-line::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #ddd;
+  margin: 0 10px;
+}
+
+
+.option:hover {
+  border-color: #FF6B82;
+  background-color: #FFF9FA; /* light gray */
+}
+.unit-title {
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: black;
+}
+.standard-price{
+  .discount {
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+}
+
+.selection {
+  margin-bottom: 20px;
+}
+.selection label {
+  margin-right: 5px;
+}
+.selection select {
+  margin-right: 15px;
+}
+
+.selection {
+  display: none;
+  margin-top: 10px; /* distance below the "1 Unit" label */
+}
+
+.selection > div {
+  display: flex;
+  gap: 10px; /* spacing between size and color select */
+  margin-top: 8px; /* spacing between #1 and #2 rows */
+}
+.summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Inter', sans-serif;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.free-delivery {
+  font-weight: 500;
+  font-size: 12px;
+  color: #FF6B82;
+  line-height: 100%;
+  margin: 0;
+}
+
+.total {
+  font-weight: 500;
+  font-size: 12px;
+  color: #000000;
+  line-height: 100%;
+  letter-spacing: 0;
+  margin: 0;
+  padding-top: 2px; /* Paragraph spacing */
+}
+ /* .option {
+    transition: background-color 0.3s, border-color 0.3s;
+  } */
+
+  .option:hover {
+    background-color: #FFF9FA;
+    border-color: #FF6B82;
+    cursor: pointer;
+  }
+
+  .option.selected {
+  background-color: #FFF0F3;
+  border-color: #FF6B82;
+}
+.option:hover,
+.option:hover .option-label {
+  background-color: #FFF9FA;
+  border-color: #FF6B82;
+}
+.option > div {
+  pointer-events: none;
+}
